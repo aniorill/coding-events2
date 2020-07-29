@@ -8,11 +8,21 @@
 
 <h1>All Events</h1>
 
-<ul>
-    <th:block th:each="event : ${events}">
-        <li th:text="${event}"></li>
-    </th:block>
-</ul>
+<table>
+    <tr>
+        <th>Event Name</th>
+        <th>Event Description</th>
+
+    </tr>
+    <tr>
+        < th:block th:each="eventItem : ${eventHashMap}">
+            <td th:text="${eventItem.getKey}"></td>
+        </th:block>
+        <th:block th:each="eventItem : ${eventHashMap}">
+            <td th:text="${eventItem.getValue}"></td>
+        </th:block>
+    </tr>
+</table>
 
 </body>
 </html>
