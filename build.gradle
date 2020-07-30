@@ -37,3 +37,10 @@ compileTestKotlin {
 		jvmTarget = "1.8"
 	}
 }
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
