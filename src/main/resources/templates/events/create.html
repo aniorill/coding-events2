@@ -5,12 +5,21 @@
 
 <h1>Create Event</h1>
 
-<nav th:replace="fragments :: navigation"></nav>
+<header th:replace="fragments :: header"></header>
+
+
+
+<!--<nav th:replace="fragments :: navigation"></nav>-->
 
 <form method="post" action="/events/create">
     <div class="form-group">
-        <label>
-        <input type="text" name="eventName">
+        <label>Name
+            <input type="text" name="eventName" class="form-control">
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Description
+            <input type="text" name="eventDescription" class="form-control">
         </label>
     </div>
     <div class="form-group">
